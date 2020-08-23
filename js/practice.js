@@ -61,3 +61,13 @@
 // }
 
 // console.log('largestNumber: ', largestNumber);
+
+// const logins = [1, 2, 3, 4, 5];
+
+// const findNumber = function (tania, andriy) {
+//   console.log('Таня что-то делает', tania);
+//   console.log('andriy', andriy);
+//   return tania + andriy;
+// };
+
+// console.log(findNumber(logins, 2));
