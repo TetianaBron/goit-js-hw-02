@@ -1,30 +1,45 @@
-// Поиск самого длинного слово в строке с пробелами
-// Напиши функцию findLongestWord(string = ""), которая принимает параметром произвольную строку
-//(в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
+// Задача 3 - 3
+// Поиск наибольшего значения среди свойств объекта
+// Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и
+// возвращает имя самого продуктивного(который выполнил больше всех задач).
+// Сотрудники и кол - во выполненных задач содержатся как свойства объекта в формате "имя": "кол-во задач".
 
-// function findLongestWord(string = ' ') {
-//   const stringSplit = string.split(' ');
-//   //May=3, the=3, force=5, be=2, with=4, you=3
-//   let longestWord = '';
-//   //.=0
+const findBestEmployee = function (employees) {
+  //const value = Object.values(employees);
+  const entries = Object.entries(employees);
+  for (const entry of entries) {
+    const key = entry[0];
+    const value = entry[1];
+    let max = Math.max(...value);
+    console.log(`${key}: ${value}`);
+  }
 
-//   for (const word of stringSplit) {
-//     if (word.length >= longestWord.length) {
-//       //1 progon - May.3 >.0 ->TRUE->longestWord=May.3
-//       //2 progon - the.3 >May.3 ->FALSE - ...
-//       //3 progon - force.5 > May.3 ->TRUE ->longestWord=Force.5
-//       longestWord = word;
-//     }
-//   }
+  return max;
+};
 
-//   return longestWord;
-// }
+// Объекты и ожидаемый результат
+const developers = {
+  ann: 29,
+  david: 35,
+  helen: 1,
+  lorence: 99,
+};
+console.log(findBestEmployee(developers));
+// 'lorence'
 
-// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
-// // 'jumped'
+const supports = {
+  poly: 12,
+  mango: 17,
+  ajax: 4,
+};
+console.log(findBestEmployee(supports));
+// 'mango'
 
-// console.log(findLongestWord('Google do a roll'));
-// // 'Google'
-
-// console.log(findLongestWord('May the force tanya be with you'));
-// // 'force'
+const sellers = {
+  lux: 147,
+  david: 21,
+  kiwi: 19,
+  chelsy: 38,
+};
+console.log(findBestEmployee(sellers));
+// 'lux'
