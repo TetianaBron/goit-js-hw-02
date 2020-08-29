@@ -1,46 +1,73 @@
-// const friends = [
-//   { name: 'Mango', online: false },
-//   { name: 'Kiwi', online: true },
-//   { name: 'Poly', online: true },
-//   { name: 'Ajax', online: false },
-// ];
+//Модуль 2
 
-//console.table(friends);
+//Массивы
 
-// const getAllNames = function (allFriends) {
-//   const names = [];
-//   for (const friend of allFriends) {
-//     console.log(friend.name);
-//     names.push(friend.name);
+// // Пустой массив
+// const arr = [];
+
+// // Массив clients с тремя элементами
+// const clients = ['Mango', 'Poly', 'Ajax'];
+
+// console.log(clients); // ["Mango", "Poly", "Ajax"]
+
+// console.log(clients[0]); // Mango
+// console.log(clients[1]); // Poly
+// console.log(clients[2]); // Ajax
+
+// const numbers = [];
+
+// for (let i = 0; i < 3; i += 1) {
+//   numbers.push(`label-${i}`);
+// }
+
+// console.log('numbers: ', numbers); // ['label-0', 'label-1', 'label-2']
+
+// Итерация по массиву
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (const client of clients) {
+//   console.log(client);
+// }
+
+// // Итерация по строке
+// const string = 'javascript';
+
+// for (const character of string) {
+//   console.log(character);
+// }
+
+// Находим самое маленькое число в массиве
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
 //   }
+// }
 
-//   return names;
-// };
+// console.log('smallestNumber: ', smallestNumber);
 
-// console.log(getAllNames(friends));
+// Находим самое большое число в массиве
 
-// const getOnLineFriends = function (allFriends) {
-//   const friendsOnLine = [];
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let largestNumber = numbers[0];
 
-//   for (const friend of allFriends) {
-//     if (friend.online) {
-//       friendsOnLine.push(friend);
-//     }
+// for (const number of numbers) {
+//   if (number > largestNumber) {
+//     largestNumber = number;
 //   }
-//   return friendsOnLine;
+// }
+
+// console.log('largestNumber: ', largestNumber);
+
+// const logins = [1, 2, 3, 4, 5];
+
+// const findNumber = function (tania, andriy) {
+//   console.log('Таня что-то делает', tania);
+//   console.log('andriy', andriy);
+//   return tania + andriy;
 // };
 
-// console.log(getOnLineFriends(friends));
-
-// const playlist = {
-//   name: 'Мой супер плейлист',
-//   rating: 5,
-//   tracks: ['трек-1', 'трек-2', 'трек-3'],
-//   trackCount: 3,
-// };
-
-// playlist.qwe = 5;
-
-// playlist.rating = 10;
-
-// console.log(playlist);
+// console.log(findNumber(logins, 2));
